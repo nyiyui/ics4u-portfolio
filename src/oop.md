@@ -13,8 +13,22 @@ Althought classes are a staple of OOP, classes are not necessarily a first-class
 Classes can be thought of as a template to create objects. In languages like Java, an object can only be made using a class as a template (called instantiation).
 
 ```java
-public class SMTPMailSender {
+public class MailSender {
+    private SMTPConnection conn;
+
+    MailSender(String server) throws IOException {
+    	conn = new SMTPConnection(server);
+    }
+    
     public void sendMail(Mail[] ms) { /* ... */ }
+}
+```
+
+### Syntax
+
+```java
+modifier class ClassName {
+    // class body, including attributes (instance/class variables and methods)
 }
 ```
 
@@ -89,4 +103,19 @@ UML is a visual language used to describe class hierarchies in object-oriented s
 classDiagram
     Object <|-- Writer
     Object <|-- Reader
+    Object <|-- YouAnimal
+    class YouAnimal {
+        +name: String
+        +age: int
+	+die()
+	+grow()
+    }
+    YouAnimal <|-- YouPerson
+    YouAnimal <|-- Youkai
+    class YouPerson {
+    	+mood: String
+    }
+    class Youkai {
+    	+watch: String
+    }
 ```
