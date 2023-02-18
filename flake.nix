@@ -27,18 +27,18 @@
       lib = import (nixpkgs + "/lib") {
         inherit system;
       };
+      buildInputs = pkgs: with pkgs; [
+        mdbook
+        mdbook-mermaid
+      ];
     in rec {
       devShells.default = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            mdbook
-          ];
+          buildInputs = buildInputs pkgs;
       };
       packages.default = pkgs.stdenv.mkDerivation {
         name = "portfolio";
         src = ./.;
-        buildInputs = with pkgs; [
-          mdbook
-        ];
+        buildInputs = buildInputs pkgs;
         installPhase = ''
           mdbook build -d "$out"
         '';

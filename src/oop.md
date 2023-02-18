@@ -49,7 +49,6 @@ public abstract class Writer {
 ```
 
 ```java
-public 
 public abstract class MailSender {
     public abstract void sendMail(Mail m) { }
     public void sendMail(Mail[] ms) {
@@ -85,3 +84,9 @@ end
 
 ## UML
 UML is a visual language used to describe class hierarchies in object-oriented systems.
+
+```mermaid
+classDiagram
+    Object <|-- Writer
+    Object <|-- Reader
+```
