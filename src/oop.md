@@ -11,6 +11,7 @@ It primarily does this by limiting access to internal state: objects only allow 
 ## Classes
 Althought classes are a staple of OOP, classes are not necessarily a first-class citizen for some OOP implementations, such as [Io](https://iolanguage.org)'s object system.
 Classes can be thought of as a template to create objects. In languages like Java, an object can only be made using a class as a template (called instantiation).
+They can also have attributes (instance variables) and methods, which operate on the object.
 
 ```java
 public class MailSender {
@@ -97,7 +98,7 @@ end
 ```
 
 ## UML
-UML is a visual language used to describe class hierarchies in object-oriented systems.
+~~YouML~~ UML is a visual language used to describe class hierarchies in object-oriented systems.
 
 ```mermaid
 classDiagram
@@ -107,15 +108,30 @@ classDiagram
     class YouAnimal {
         +name: String
         +age: int
-	+die()
-	+grow()
+        +die()
+        +grow()
     }
     YouAnimal <|-- YouPerson
     YouAnimal <|-- Youkai
     class YouPerson {
-    	+mood: String
+        +mood: String
     }
     class Youkai {
-    	+watch: String
+        +watch: String
+    }
+```
+
+A UML class has 3 main sections: the class name (Younimal), attributes, and methods.
+
+```mermaid
+classDiagram
+    YouLife <|-- Younimal
+    class Younimal {
+        +public_attr: String
+        #protected_attr: int
+        -private_attr: double
+        +public_void_method(): void
+        #protected_method(): int
+        -private_method(): Younimal
     }
 ```
