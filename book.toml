@@ -3,7 +3,7 @@ authors = ["nyiyui"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Java Tutorial"
+title = "The Youfolio - A Beautiful Java Tutorial"
 
 [preprocessor.mermaid]
 command = "mdbook-mermaid"

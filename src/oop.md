@@ -3,13 +3,83 @@
 ## Why OOP?
 OOP is a philosophy for organising programs, similar to procedural and functional progamming.
 
-## Objects
 In OOP, all actions that the program does is organised around the "object".
-An object represents a state machine, or an abstraction that protects its internal state from corruption.
-It primarily does this by limiting access to internal state: objects only allow methods (written for the class) to edit its internal state, allowing checks to be performed on the state modification.
+An object represents a state machine, or an abstraction that protects its internal state (represented by its instance variables) from corruption.
+It primarily does this by limiting access to internal state (called encapsulation): objects only allow methods (written for the class) to edit its internal state (called behaviour, implemented by methods), allowing checks to be performed on the state modification.
+Some OOP introductions also use the notion of identity, which is a unique reference to an object (typically a address in memory (CPython's `id()` builtin function)). It may also be equal to the variable name.
+
+## Attributes and Methods
+
+For example, in Smalltalk, `1` would be an object with a `+` attribute (called message in Smalltalk jargon).
+`1 + 2` would mean "invoke the `+` method of `1` with an argument of `2`" (send a message `+` with arguments `2` in Smalltalk jargon).
+
+Another example in Java:
+```java
+"OOP".replace('O', 'o') // becomes "ooP"
+```
+`"OOP"` is a `String` object, and has a `replace(char searchChar, char newChar)` method. This would invoke the method (behaviour), and return a new string "ooP".
+
+Some languages (e.g. Python, Ruby) treat methods as attributes that happen to be methods. In Python:
+```python3
+# define blank class A
+class A:
+    pass
+
+# instantiate new object b with class A
+b = A()
+# assign the print function to b.something
+b.something = print
+# call it like any method
+b.something('Hello')
+```
+
+Finally, OOP has a notion of polymorphism, which means that many different objects and classes can be treated as the same one.
+For example, we can have the following (simplified) class hierarchy:
+
+```mermaid
+classDiagram
+    class File {
+        +getRawData(): array of bytes
+    }
+    File <|-- JPEGFile
+    class JPEGFile {
+        +getImageWidth(): int
+    }
+    File <|-- CSVFile
+    class CSVFile {
+        +getRows(): array of rows
+    }
+```
+
+We can put a `JPEGFile` object into a variable with type `File`, and treat it as a `File` object, calling `getRawData()`, for example.
+This allows us to use the same code and have slightly different functionality for the small parts (e.g. we can have a `OnlineFile` which accesses the file online for `getRawData()`).
+
+Here's another example:
+
+```java
+public class YouLife {
+    sleep() {
+        System.out.println("I shall go sleep.");
+    }
+}
+class Animal extends YouLife {
+    public String name;
+    YouLife(String name) { # define a constructor such that `new Animal("John")` works.
+        this.name = name;
+    }
+
+    @override # signify that we want to override this method
+    void sleep() {
+        System.out.println(this.name + " goes to sleep.");
+    }
+}
+
+YouLife l = new Animal("John");
+l.sleep(); # calls Animal class' sleep method, but acts like a YouLife object
+```
 
 ## Classes
-Althought classes are a staple of OOP, classes are not necessarily a first-class citizen for some OOP implementations, such as [Io](https://iolanguage.org)'s object system.
+Althought classes are a staple of OOP, classes are not always required or even exist. For eaxmple, in JavaScript there is no class that has special behaviour compared to objects.
 Classes can be thought of as a template to create objects. In languages like Java, an object can only be made using a class as a template (called instantiation).
 They can also have attributes (instance variables) and methods, which operate on the object.
 
@@ -32,6 +102,20 @@ modifier class ClassName {
     // class body, including attributes (instance/class variables and methods)
 }
 ```
+
+### Main Method
+
+A **main method** is a normal method treated specially by Java. It's normal form is as follows (run using `java Minecraft.java`):
+
+```java
+public class Minecraft {
+    public static void main(String[] args) { /* ... */ }
+}
+```
+
+It must be `public static void main` to be recognized and run by Java.
+
+A **driver class** contains a main method along with some other code to run an application (in the example above, `Minecraft` would be a driver class).
 
 ## Abstract Classes and Interfaces
 There seems to be some confusion between the two, as they are both very similar.
@@ -97,6 +181,10 @@ class Class
 end
 ```
 
+## So?
+
+Although there are many differences in implementation, most OOP environments have the notions of abstraction, encapsulation, inheritance, and polymorphism.
+
 ## UML
 ~~YouML~~ UML is a visual language used to describe class hierarchies in object-oriented systems.
 
@@ -135,3 +223,15 @@ classDiagram
         -private_method(): Younimal
     }
 ```
+
+Each of the prefixes correspond to a visbility (in Java, for example):
+
+|Symbol|Java Keyword|Name           |
+|------|------------|---------------|
+|`+`   |`public`    |Public         |
+|`#`   |`protected` |Protected      |
+|`-`   |`private`   |Private        |
+|`~`   |*none*      |Package Private|
+
+This page uses [Mermaid](https://mermaid.js.org/) to generate the UML, which is pretty good and well-documented.
+It also has a [live editor](https://mermaid.live).
