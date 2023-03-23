@@ -184,6 +184,7 @@ end
 ## So?
 
 Although there are many differences in implementation, most OOP environments have the notions of abstraction, encapsulation, inheritance, and polymorphism.
+Using these methods, we can make easy-to-understand and concise object-oriented code.
 
 ## UML
 ~~YouML~~ UML is a visual language used to describe class hierarchies in object-oriented systems.
@@ -235,3 +236,9 @@ Each of the prefixes correspond to a visbility (in Java, for example):
 
 This page uses [Mermaid](https://mermaid.js.org/) to generate the UML, which is pretty good and well-documented.
 It also has a [live editor](https://mermaid.live).
+
+## Bibliography
+
+- https://docs.oracle.com/javase/tutorial/i18n/text/string.html
+- https://docs.oracle.com/javase/tutorial/java/index.html and its children pages
+- https://www.uml-diagrams.org/visibility.html for UML visibility prefixes
