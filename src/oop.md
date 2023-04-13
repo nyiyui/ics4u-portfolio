@@ -6,7 +6,9 @@ OOP is a philosophy for organising programs, similar to procedural and functiona
 In OOP, all actions that the program does is organised around the "object".
 An object represents a state machine, or an abstraction that protects its internal state (represented by its instance variables) from corruption.
 It primarily does this by limiting access to internal state (called encapsulation): objects only allow methods (written for the class) to edit its internal state (called behaviour, implemented by methods), allowing checks to be performed on the state modification.
-Some OOP introductions also use the notion of identity, which is a unique reference to an object (typically a address in memory (CPython's `id()` builtin function)). It may also be equal to the variable name.
+Some OOP introductions also use the notion of identity, which is a unique reference to an object (typically an address in memory (CPython's `id()` builtin function)). It may also be equal to the variable name.
+
+This is pretty abstract and confusing, so let's make things more concrete.
 
 ## Attributes and Methods
 
