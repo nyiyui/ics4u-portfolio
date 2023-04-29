@@ -111,8 +111,8 @@ Similarly, higher dimensions can be defined as such:
 int a[][][] = new int[2][3][4];
 // ↑ same as ↓
 int a[][] = {
-  {{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}},
-  {{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}}
+  { {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0} },
+  { {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0} }
 };
 // iteration follows the same principle
 for (int i = 0; i < a.length; i ++)
