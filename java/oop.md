@@ -330,6 +330,28 @@ public abstract class MailSender {
 }
 ```
 
+### More about Interfaces
+
+Interfaces, like classes, can extend other interfaces. For example, the `List` interface extends the `Collection` interface.
+
+```java
+public interface List<E> extends Collection<E> {
+    /* ... */
+}
+```
+
+They are declared using the `interface` keyword, as seen before, and can include any number of methods and final, static fields.
+
+When writing a clsas that implements an interface, you need to use the `implements` keyword:
+
+```java
+public class ArrayList<E> implements List<E> {
+    /* ... */
+}
+```
+
+Also, checked exceptions declared on implementations of the method in a class must be an subset of those declared in the interface and all of their subclassed exceptions.
+
 ## Polymorphism
 
 Polymorphism is the concept of having a single, unified interface to multiple types/implementations.
