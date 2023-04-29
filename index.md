@@ -7,7 +7,7 @@ I am a high school student at William Lyon Mackenzie CI in Toronto, Ontario.
 My interests and hobbies include hobby electronics and programming.
 I am also interested in Human-Computer Interaction, especially wearable devices.
 
-You may also want to see some of [my projects](/projects).
+You may also want to see some of [my projects](projects).
 
 ## Contact
 
