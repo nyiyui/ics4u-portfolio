@@ -1,6 +1,8 @@
 main:
-  - title: "Java Tutorial"
+  - title: "AP Java Tutorial"
     url: /java/
+  - title: "Projects"
+    url: /projects/
 java:
   - title: "Java"
     children:
