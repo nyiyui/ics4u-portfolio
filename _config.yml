@@ -30,7 +30,6 @@ defaults:
       author_profile: true
       read_time: true
       comments: true
-      share: true
       related: true
   # _pages
   - scope:
@@ -39,23 +38,13 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _publications
+  # _projects
   - scope:
       path: ""
-      type: publications
+      type: projects
     values:
       layout: single
       author_profile: true
-      share: true
-      comments: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
   - scope:
       path: "java"
     values:
@@ -94,3 +83,11 @@ mermaid:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
