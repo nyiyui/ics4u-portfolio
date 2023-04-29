@@ -28,6 +28,7 @@
         inherit system;
       };
       buildInputs = pkgs: with pkgs; [
+        bundler
         mdbook
         mdbook-mermaid
       ];

@@ -1,4 +1,6 @@
-# Arrays
+---
+title: Arrays
+---
 
 Arrays in Java are similar to arrays in languages such as Python or Go. If you know them, only a quick skim is required. (Most concepts in Java are simple and boring, unlike, say, C `:()` )
 

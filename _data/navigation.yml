@@ -1,0 +1,20 @@
+main:
+  - title: "Java Tutorial"
+    url: /java/
+java:
+  - title: "Java"
+    children:
+      - title: "Welcome"
+        url: /java/
+      - title: "Arrays"
+        url: /java/array/
+      - title: "ArrayLists"
+        url: /java/arraylist/
+      - title: "OOP"
+        url: /java/oop/
+      - title: "Recursion"
+        url: /java/recurson/
+      - title: "Searching"
+        url: /java/search/
+      - title: "Sorting"
+        url: /java/sort/

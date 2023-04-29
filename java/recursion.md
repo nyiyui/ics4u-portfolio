@@ -1,4 +1,6 @@
-# Recursion
+---
+title: Recursion
+---
 
 Recursion is a (in my opinion) beautiful way to declaratively represent functions.
 
