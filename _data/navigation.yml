@@ -15,7 +15,7 @@ java:
       - title: "OOP"
         url: /java/oop/
       - title: "Recursion"
-        url: /java/recurson/
+        url: /java/recursion/
       - title: "Searching"
         url: /java/search/
       - title: "Sorting"
