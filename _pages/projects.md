@@ -10,7 +10,7 @@ Featured Projects
 ---
 {% for post in site.projects reversed %}
 {% if post.featured %}
-  {% include archive-single.html %}
+  {% include archive-single.html post-post %}
 {% endif %}
 {% endfor %}
 
@@ -18,6 +18,6 @@ Other Projects
 ---
 {% for post in site.projects reversed %}
 {% unless post.featured %}
-{% include archive-single.html %}
+{% include archive-single.html post=post %}
 {% endunless %}
 {% endfor %}
