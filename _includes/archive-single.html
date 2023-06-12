@@ -39,11 +39,7 @@
 {% endif %}
 <div class="columntext">
   <h3 class="archive__item-title" itemprop="headline">
-    {% if post.exturl %}
-      <a href="{{ post.exturl }}">{{ title }}</a>
-    {% else %}
-      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-    {% endif %}
+    <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
   </h3>
     {% if post.blurb %}
       {{ post.blurb }}
