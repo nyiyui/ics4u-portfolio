@@ -70,3 +70,7 @@ I made the code and mechanics for levels 1 and 3. The hardest part was using the
 ![purple-affogato playing the game.]({{ base_path }}/assets/images/PXL_20230609_173338319.jpg)
 
 Since the scoring uses the sigmoid function, 28469 is surprisingly hard to do. Also, it gets more difficult as the speed increases.
+
+## Game Demo
+
+You can watch the [Demo Video on YouTube](https://youtu.be/T95pYZif1uA).
