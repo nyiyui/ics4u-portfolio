@@ -7,7 +7,7 @@ blurb: "Final project for my ICS4U course. This game, Survibee, follows the path
 
 {% include base_path %}
 
-[Source code](https://github.com/nyiyui/koseihoryuen")
+[Source code](https://github.com/nyiyui/koseihoryuen)
 
 - description
 - individual contribution
